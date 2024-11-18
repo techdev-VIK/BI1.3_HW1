@@ -6,13 +6,13 @@ export default function Books(){
 
     const [successMessage, setSuccessMessage] = useState('');
 
-    const {data, loading, error} = useFetch(`http://localhost:3000/allbooks`)
+    const {data, loading, error} = useFetch(`https://be-4-assignment1-omega.vercel.app/allbooks`)
 
     // console.log(data);
 
     const handleDelete = async (bookId) => {
         try {
-            const response = await fetch(`http://localhost:3000/books/delBook/${bookId}`,{
+            const response = await fetch(`https://be-4-assignment1-omega.vercel.app/books/delBook/${bookId}`,{
                 method: "DELETE"
             },
         )
